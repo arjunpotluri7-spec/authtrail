@@ -1,0 +1,15 @@
+id: lockout-storm
+title: Account lockout storm
+type: lockout_storm
+severity: medium
+attack:
+  - id: T1110
+    name: Brute Force
+description: >
+  Several account lockouts (Windows event 4740) in a short window, usually the side effect
+  of a password attack against many accounts.
+params:
+  threshold: 3
+  window_minutes: 15
+references:
+  - https://attack.mitre.org/techniques/T1110/

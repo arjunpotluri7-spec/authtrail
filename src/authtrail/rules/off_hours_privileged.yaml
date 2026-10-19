@@ -1,0 +1,15 @@
+id: off-hours-privileged
+title: Privileged account used outside business hours
+type: off_hours_privileged
+severity: medium
+attack:
+  - id: T1078.003
+    name: "Valid Accounts: Local Accounts"
+description: >
+  A successful login or sudo command by an account in the configured privileged_users list
+  outside the configured business hours and time zone.
+params:
+  include_sudo: true
+  group_minutes: 60
+references:
+  - https://attack.mitre.org/techniques/T1078/003/

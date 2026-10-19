@@ -1,0 +1,16 @@
+id: impossible-travel
+title: Impossible travel between configured locations
+type: impossible_travel
+severity: high
+attack:
+  - id: T1078
+    name: Valid Accounts
+description: >
+  The same account logs in successfully from two networks whose configured locations are
+  too far apart for the time between the logins. Locations come only from the local
+  ip_locations map in the config; no GeoIP lookups are made.
+params:
+  max_speed_kmh: 900
+  min_distance_km: 100
+references:
+  - https://attack.mitre.org/techniques/T1078/

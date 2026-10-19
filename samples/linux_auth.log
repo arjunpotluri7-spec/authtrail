@@ -1,0 +1,85 @@
+Oct 13 12:17:01 web-01 CRON[2871]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 13 12:17:01 web-01 CRON[2871]: pam_unix(cron:session): session closed for user root
+Oct 13 13:02:11 web-01 sshd[2904]: Accepted publickey for alice from 10.0.0.21 port 50412 ssh2
+Oct 13 13:02:11 web-01 sshd[2904]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+Oct 13 13:02:11 web-01 systemd-logind[612]: New session 31 of user alice.
+Oct 13 13:17:01 web-01 CRON[2950]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 13 13:17:01 web-01 CRON[2950]: pam_unix(cron:session): session closed for user root
+Oct 13 14:40:19 web-01 sshd[2904]: Received disconnect from 10.0.0.21 port 50412:11: disconnected by user
+Oct 13 14:40:19 web-01 sshd[2904]: Disconnected from user alice 10.0.0.21 port 50412
+Oct 13 15:30:44 web-01 sshd[3120]: Accepted password for bob from 10.0.0.34 port 51234 ssh2
+Oct 13 15:30:44 web-01 sshd[3120]: pam_unix(sshd:session): session opened for user bob(uid=1002) by (uid=0)
+Oct 13 16:00:12 web-01 sshd[3188]: Accepted publickey for deploy from 10.0.0.40 port 40112 ssh2
+Oct 13 16:00:12 web-01 sshd[3188]: pam_unix(sshd:session): session opened for user deploy(uid=1003) by (uid=0)
+Oct 13 16:01:30 web-01 sudo:   deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl status app.service
+Oct 13 16:01:30 web-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1003)
+Oct 13 16:01:31 web-01 sudo: pam_unix(sudo:session): session closed for user root
+Oct 13 16:12:05 web-01 sshd[3120]: Disconnected from user bob 10.0.0.34 port 51234
+Oct 13 16:30:47 web-01 sshd[3188]: Disconnected from user deploy 10.0.0.40 port 40112
+Oct 13 17:45:03 web-01 sshd[3302]: Accepted publickey for alice from 10.0.0.21 port 50988 ssh2
+Oct 13 17:45:03 web-01 sshd[3302]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+Oct 13 18:10:55 web-01 sshd[3302]: Disconnected from user alice 10.0.0.21 port 50988
+Oct 14 01:17:01 web-01 CRON[4011]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 01:17:01 web-01 CRON[4011]: pam_unix(cron:session): session closed for user root
+Oct 14 01:58:03 web-01 sshd[4102]: Invalid user admin from 203.0.113.45 port 50122
+Oct 14 01:58:05 web-01 sshd[4102]: Failed password for invalid user admin from 203.0.113.45 port 50122 ssh2
+Oct 14 01:58:06 web-01 sshd[4102]: Connection closed by invalid user admin 203.0.113.45 port 50122 [preauth]
+Oct 14 01:59:41 web-01 sshd[4110]: Invalid user test from 203.0.113.45 port 50388
+Oct 14 01:59:43 web-01 sshd[4110]: Failed password for invalid user test from 203.0.113.45 port 50388 ssh2
+Oct 14 01:59:44 web-01 sshd[4110]: Connection closed by invalid user test 203.0.113.45 port 50388 [preauth]
+Oct 14 02:01:12 web-01 sshd[4131]: Invalid user oracle from 203.0.113.45 port 50720
+Oct 14 02:01:14 web-01 sshd[4131]: Failed password for invalid user oracle from 203.0.113.45 port 50720 ssh2
+Oct 14 02:02:50 web-01 sshd[4140]: Invalid user postgres from 203.0.113.45 port 51004
+Oct 14 02:02:52 web-01 sshd[4140]: Failed password for invalid user postgres from 203.0.113.45 port 51004 ssh2
+Oct 14 02:04:27 web-01 sshd[4152]: Invalid user ubuntu from 203.0.113.45 port 51290
+Oct 14 02:04:29 web-01 sshd[4152]: Failed password for invalid user ubuntu from 203.0.113.45 port 51290 ssh2
+Oct 14 02:05:58 web-01 sshd[4166]: Invalid user guest from 203.0.113.45 port 51577
+Oct 14 02:06:00 web-01 sshd[4166]: Failed password for invalid user guest from 203.0.113.45 port 51577 ssh2
+Oct 14 02:07:30 web-01 sshd[4171]: Invalid user jenkins from 203.0.113.45 port 51803
+Oct 14 02:07:32 web-01 sshd[4171]: Failed password for invalid user jenkins from 203.0.113.45 port 51803 ssh2
+Oct 14 02:09:02 web-01 sshd[4188]: Failed password for bob from 203.0.113.45 port 52011 ssh2
+Oct 14 02:09:03 web-01 sshd[4188]: Connection closed by authenticating user bob 203.0.113.45 port 52011 [preauth]
+Oct 14 02:10:35 web-01 sshd[4195]: Failed password for invalid user admin from 203.0.113.45 port 52240 ssh2
+Oct 14 02:11:01 web-01 sshd[4199]: Failed password for invalid user test from 203.0.113.45 port 52366 ssh2
+Oct 14 02:11:48 web-01 sshd[4203]: Failed password for bob from 203.0.113.45 port 52491 ssh2
+Oct 14 02:12:40 web-01 sshd[4210]: Failed password for invalid user oracle from 203.0.113.45 port 52613 ssh2
+Oct 14 02:14:09 web-01 sshd[4222]: Accepted password for bob from 203.0.113.45 port 53122 ssh2
+Oct 14 02:14:09 web-01 sshd[4222]: pam_unix(sshd:session): session opened for user bob(uid=1002) by (uid=0)
+Oct 14 02:14:10 web-01 systemd-logind[612]: New session 41 of user bob.
+Oct 14 02:16:33 web-01 sudo: pam_unix(sudo:auth): authentication failure; logname=bob uid=1002 euid=0 tty=/dev/pts/2 ruser=bob rhost=  user=bob
+Oct 14 02:16:51 web-01 sudo:      bob : 3 incorrect password attempts ; TTY=pts/2 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Oct 14 02:21:07 web-01 sshd[4222]: Received disconnect from 203.0.113.45 port 53122:11: disconnected by user
+Oct 14 02:21:07 web-01 sshd[4222]: Disconnected from user bob 203.0.113.45 port 53122
+Oct 14 02:21:07 web-01 sshd[4222]: pam_unix(sshd:session): session closed for user bob
+Oct 14 03:09:58 web-01 sshd[4390]: Accepted publickey for deploy from 10.0.0.40 port 40388 ssh2
+Oct 14 03:09:58 web-01 sshd[4390]: pam_unix(sshd:session): session opened for user deploy(uid=1003) by (uid=0)
+Oct 14 03:10:22 web-01 sudo:   deploy : TTY=pts/1 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl restart app.service
+Oct 14 03:10:22 web-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1003)
+Oct 14 03:10:25 web-01 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 03:14:40 web-01 sshd[4390]: Disconnected from user deploy 10.0.0.40 port 40388
+Oct 14 04:17:01 web-01 CRON[4502]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 04:17:01 web-01 CRON[4502]: pam_unix(cron:session): session closed for user root
+Oct 14 04:40:02 web-01 sshd[4611]: Failed password for root from 198.51.100.23 port 41022 ssh2
+Oct 14 04:40:02 web-01 sshd[4611]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=198.51.100.23  user=root
+Oct 14 04:40:31 web-01 sshd[4611]: Failed password for root from 198.51.100.23 port 41022 ssh2
+Oct 14 04:41:05 web-01 sshd[4611]: Failed password for root from 198.51.100.23 port 41022 ssh2
+Oct 14 04:41:06 web-01 sshd[4611]: error: maximum authentication attempts exceeded for root from 198.51.100.23 port 41022 ssh2 [preauth]
+Oct 14 04:41:06 web-01 sshd[4611]: Disconnecting authenticating user root 198.51.100.23 port 41022: Too many authentication failures [preauth]
+Oct 14 04:4
+Oct 14 04:41:39 web-01 sshd[4618]: Failed password for root from 198.51.100.23 port 41190 ssh2
+Oct 14 04:42:08 web-01 sshd[4618]: message repeated 3 times: [ Failed password for root from 198.51.100.23 port 41190 ssh2]
+Oct 14 04:42:09 web-01 sshd[4618]: Disconnecting authenticating user root 198.51.100.23 port 41190: Too many authentication failures [preauth]
+Oct 14 04:43:15 web-01 sshd[4625]: Failed password for root from 198.51.100.23 port 41377 ssh2
+Oct 14 04:43:44 web-01 sshd[4625]: Failed password for root from 198.51.100.23 port 41377 ssh2
+Oct 14 04:44:02 web-01 sshd[4625]: Failed password for root from 198.51.100.23 port 41377 ssh2
+Oct 14 04:44:31 web-01 sshd[4625]: Failed password for root from 198.51.100.23 port 41377 ssh2
+Oct 14 04:44:32 web-01 sshd[4625]: Disconnecting authenticating user root 198.51.100.23 port 41377: Too many authentication failures [preauth]
+@@@@ partial write @@@@
+Oct 14 05:17:01 web-01 CRON[4700]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 05:17:01 web-01 CRON[4700]: pam_unix(cron:session): session closed for user root
+Oct 14 13:58:40 web-01 sshd[5230]: Accepted publickey for alice from 10.0.0.22 port 49821 ssh2
+Oct 14 13:58:40 web-01 sshd[5230]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+Oct 14 13:58:41 web-01 systemd-logind[612]: New session 52 of user alice.
+Oct 14 14:12:09 web-01 sudo:    alice : TTY=pts/3 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/journalctl -u app.service -n 50
+Oct 14 14:12:09 web-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by alice(uid=1001)
+Oct 14 15:02:33 web-01 sshd[5230]: Disconnected from user alice 10.0.0.22 port 49821

@@ -1,0 +1,77 @@
+# Authtrail example configuration.
+# Every key is optional; anything left out uses the default shown in the comment.
+# Validate your copy with:  authtrail validate-config my-config.yaml
+# This file contains no secrets and Authtrail never needs any.
+
+version: 1
+
+# Time zone for syslog timestamps that carry no zone (classic "Oct 14 02:14:09" lines).
+# Default: UTC. Use an IANA name such as America/New_York.
+syslog_timezone: UTC
+
+# Used by the off-hours-privileged rule. Times must be quoted ("08:00"), because YAML
+# reads unquoted 08:00 as a number. If end is earlier than start, the window wraps
+# past midnight (night shifts).
+business_hours:
+  timezone: America/New_York   # default: UTC
+  start: "08:00"               # default: "08:00"
+  end: "18:00"                 # default: "18:00"
+  days: [mon, tue, wed, thu, fri]
+
+# Accounts whose off-hours use is worth a look. Matching is case-insensitive.
+# Default: [root, administrator]
+privileged_users:
+  - root
+  - administrator
+  - deploy
+
+# Local, user-supplied locations for impossible-travel checks. Authtrail never performs
+# GeoIP or any other lookup; only networks listed here have a location.
+# The most specific matching CIDR wins.
+ip_locations:
+  "10.0.0.0/24":
+    name: New York datacenter
+    lat: 40.7128
+    lon: -74.0060
+  "10.20.0.0/16":
+    name: New York office
+    lat: 40.7128
+    lon: -74.0060
+  "10.40.0.0/16":
+    name: Singapore office
+    lat: 1.3521
+    lon: 103.8198
+
+stories:
+  # Alerts that share a user or source IP and are at most this far apart in time are
+  # merged into one attack story. Default: 120.
+  gap_minutes: 120
+
+evidence:
+  # Evidence lines kept per alert (the last line, often the decisive one, is always kept).
+  # Default: 5.
+  max_per_alert: 5
+
+limits:
+  # Refuse input files larger than this. Default: 200.
+  max_file_size_mb: 200
+
+# Per-rule overrides, keyed by rule id (see `authtrail rules list`).
+# Each may set enabled, severity, and params (see `authtrail rules show RULE_ID`).
+rules:
+  brute-force:
+    params:
+      threshold: 5
+      window_minutes: 10
+  password-spray:
+    params:
+      min_users: 5
+      window_minutes: 30
+  success-after-failures:
+    severity: high
+    params:
+      min_failures: 5
+      window_minutes: 30
+      scope: source_ip
+  new-source-for-user:
+    enabled: true

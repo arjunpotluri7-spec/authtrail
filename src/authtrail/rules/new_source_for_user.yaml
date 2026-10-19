@@ -1,0 +1,16 @@
+id: new-source-for-user
+title: Login from a new source for this account
+type: new_source_for_user
+severity: low
+attack:
+  - id: T1078
+    name: Valid Accounts
+description: >
+  An account logs in successfully from a network it was not seen using earlier in the
+  analyzed data. Low severity on its own; useful context when correlated with other alerts.
+params:
+  min_prior_logins: 1
+  ipv4_prefix: 24
+  ipv6_prefix: 64
+references:
+  - https://attack.mitre.org/techniques/T1078/

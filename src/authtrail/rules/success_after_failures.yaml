@@ -1,0 +1,19 @@
+id: success-after-failures
+title: Successful login after repeated failures
+type: success_after_failures
+severity: high
+attack:
+  - id: T1110
+    name: Brute Force
+  - id: T1078
+    name: Valid Accounts
+description: >
+  A successful login from a source that just produced a run of failed logins. This is the
+  moment a password attack may have turned into account access.
+params:
+  min_failures: 5
+  window_minutes: 30
+  scope: source_ip
+references:
+  - https://attack.mitre.org/techniques/T1110/
+  - https://attack.mitre.org/techniques/T1078/

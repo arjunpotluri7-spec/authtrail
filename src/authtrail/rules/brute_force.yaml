@@ -1,0 +1,15 @@
+id: brute-force
+title: Brute-force password guessing
+type: brute_force
+severity: medium
+attack:
+  - id: T1110.001
+    name: "Brute Force: Password Guessing"
+description: >
+  Many failed logins for one account from one source address in a short window.
+  Typical of automated password guessing against SSH, RDP, or SMB.
+params:
+  threshold: 5
+  window_minutes: 10
+references:
+  - https://attack.mitre.org/techniques/T1110/001/

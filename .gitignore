@@ -1,0 +1,29 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Authtrail output and local data (may contain real log lines)
+report*.md
+report*.json
+report*.txt
+reports/
+local/
+*.local.yaml
+config.yaml
